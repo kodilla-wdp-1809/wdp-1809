@@ -34,6 +34,21 @@
       }
     }
 
+    .stars {
+      span {
+        text-decoration: none;
+        color: rgb(42,42,42);
+        @extend .far;
+        @extend .fa-star;
+        
+        &.star-hover {
+          color: $primary;
+          font-weight: 900;
+        }
+        
+        &.full {
+          @extend .fas;
+
     .photo {
       position: relative;
       padding: 80% 10px 0;
