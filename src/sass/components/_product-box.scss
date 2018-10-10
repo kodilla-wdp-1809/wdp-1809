@@ -48,6 +48,9 @@
         
         &.full {
           @extend .fas;
+        }
+      }
+    }
 
     .photo {
       position: relative;
