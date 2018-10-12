@@ -1,0 +1,56 @@
+@media (max-width: 767px) {
+  header {
+    .top-bar-left-side {
+      padding-right: 5px;
+    }
+
+    .top-bar-right-side {
+      padding-left: 5px;
+    }
+
+    .mobile-item {
+      margin-left: 0.25rem !important;
+      margin-right: 0.25rem !important;
+    }
+
+    .mobile-link {
+      font-size: 0 !important;
+    }
+
+    .mobile-icon {
+      font-size: 15px;
+    }
+
+    .mobile-direction {
+      flex-direction: column-reverse;
+    }
+
+    .mobile-right {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .mobile-right--top {
+      margin-top: 20px;
+    }
+
+    .mobile-right--bottom {
+      margin-bottom: 20px;
+    }
+
+    .mobile-center {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .company-claim {
+      .phone-number {
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
