@@ -27,7 +27,7 @@ header {
       margin-right: 1.5rem;
 
       i {
-        margin-left: 5px
+        margin-left: 5px;
       }
     }
 
@@ -35,7 +35,7 @@ header {
       margin-left: 1.5rem;
 
       i {
-        margin-right: 5px
+        margin-right: 5px;
       }
     }
   }
@@ -43,7 +43,7 @@ header {
   .company-claim {
     background-color: $header-bg;
 
-    .container>.row {
+    .container > .row {
       height: 145px;
     }
 
@@ -66,7 +66,6 @@ header {
     }
 
     .cart {
-
       .cart-box {
         display: inline-block;
         position: relative;
@@ -116,7 +115,7 @@ header {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: #ffffff;
 
-    .container>.row {
+    .container > .row {
       height: 84px;
     }
 
@@ -170,8 +169,131 @@ header {
       .category {
         border-right: 1px solid $form-border-color;
         display: flex;
+        width: 220px;
         align-items: center;
         position: relative;
+
+        .menu-list {
+          position: relative;
+          display: inline-flex;
+          width: 220px;
+          height: 50px;
+          padding: 20px 0;
+          margin-right: 2px;
+
+          &:hover {
+            ul.menu-list-links {
+              display: block;
+            }
+          }
+
+          i {
+            color: $primary;
+            position: absolute;
+            top: 17px;
+          }
+
+          .menu-list-placeholder {
+            color: #2a2a2a;
+            position: relative;
+            left: 45px;
+            top: -5px;
+            font-size: 14px;
+          }
+
+          ul.menu-list-links {
+            width: 220px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: none;
+            z-index: 10;
+            position: absolute;
+            top: 50px;
+            left: -1px;
+            background-color: #ffffff;
+            box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
+
+            li {
+              display: block;
+              width: 100%;
+              margin: 0;
+              padding: 10px 0;
+              border-left: 5px solid #ffffff;
+
+              &:hover {
+                ul.menu-links-sub {
+                  display: block;
+                }
+              }
+
+              ul.links-height-2 {
+                top: 44px;
+              }
+
+              ul.links-height-3 {
+                top: 88px;
+              }
+
+              ul.menu-links-sub {
+                display: none;
+                position: absolute;
+                width: 219px;
+                left: 221px;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: #ffffff;
+                box-shadow: 0 1px 3.464px 1px rgba(1, 2, 2, 0.2);
+
+                li {
+                  display: block;
+                  width: 100%;
+                  margin: 0;
+                  padding: 10px 0;
+                  border-left: 5px solid #ffffff;
+
+                  &:hover {
+                    border-left: 5px solid #2a2a2a;
+
+                    a {
+                      color: #ffffff;
+                    }
+                  }
+
+                  a {
+                    color: #000000;
+                  }
+                }
+              }
+
+              &:hover {
+                background-color: $primary;
+                box-shadow: 0 2px 3.464px 1px rgba(1, 2, 2, 0.2);
+                border-left: 5px solid #2a2a2a;
+
+                a {
+                  color: #ffffff;
+                }
+              }
+
+              a {
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+                display: block;
+                color: #000000;
+                text-align: center;
+              }
+            }
+          }
+        }
+
+        i {
+          position: absolute;
+          right: 10px;
+          z-index: 0;
+        }
 
         i:first-child {
           color: $primary;
@@ -186,22 +308,15 @@ header {
           z-index: 0;
         }
 
-        select {
-          -webkit-appearance: none;
-          appearance: none;
-          border: 0;
-          background-color: transparent;
-          outline: 0;
-          padding: 5px 30px 5px 35px;
-          font-size: 14px;
-          position: relative;
-          z-index: 1;
-          white-space: nowrap;
-        }
         &:hover {
           background-color: $primary;
-          i:first-child,  
+
+          i:first-child,
           i:last-child {
+            color: #fff;
+          }
+
+          .menu-list-placeholder {
             color: #fff;
           }
         }
@@ -214,7 +329,7 @@ header {
 
         input {
           border: 0;
-          padding-left: 10px;
+          padding-left: 15px;
           font-size: 14px;
           outline: none;
 
@@ -298,7 +413,7 @@ header {
       .second {
         display: none;
         justify-content: center;
-        
+
         .fa-search {
           display: none;
         }
