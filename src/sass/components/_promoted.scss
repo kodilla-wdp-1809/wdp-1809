@@ -1,0 +1,246 @@
+.section--promoted {
+  .promoted-card-container {
+    flex-grow: inherit;
+    width: 390px;
+  }
+
+  .promoted-card {
+    width: 360px;
+    border: 1px solid $card-border-color;
+  }
+
+  .promoted-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $text-color;
+    height: 50px;
+    padding: 0 18px;
+  }
+
+  .promoted-card-title {
+    color: white;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .promoted-card-dots {
+    span {
+        content: '';
+        height: 13px;
+        width: 13px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: white;
+        transition-duration: 0.5s;
+
+        &:hover {
+            background-color: $primary;
+        }
+    }
+
+    .active {
+        background-color: $primary;
+    }
+  }
+
+  .promoted-card-image {
+    height: 290px;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .promoted-card-add-button {
+    cursor: pointer;
+    border: none;
+    background-color: $footer-claim-bg;
+    color: white;
+    padding: 10px;
+    transition-duration: 0.5s;
+
+    &:hover {
+      background-color: $primary;
+    }
+  }
+
+  .promoted-card-counters {
+    padding-top: 70px;
+  }
+
+  .promoted-card-counter {
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: $footer-claim-bg;
+    opacity: 0.9;
+    color: white;
+    padding-top: 10px;
+
+    h2 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    h2,
+    p {
+        margin: 0;
+        padding: 0;
+    }
+  }
+
+  .promoted-card-name {
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  .promoted-card-stars {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .stars {
+      span {
+        text-decoration: none;
+        color: rgb(42,42,42);
+        @extend .far;
+        @extend .fa-star;
+
+        &.star-hover {
+          color: $primary;
+          font-weight: 900;
+        }
+
+        &.full {
+          @extend .fas;
+        }
+      }
+    }
+  }
+
+  .promoted-card-slider {
+    margin: 0 10px;
+    border-bottom: 1px solid #2a2a2a;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $primary;
+      transform: translateX(-50%);
+    }
+  }
+
+  .promoted-card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 15px 15px;
+
+    .price {
+      .normal-price {
+        font-size: 14px;
+        color: $old-price-color;
+        text-decoration: line-through;
+      }
+
+      .promoted-price {
+        background-color: $footer-claim-bg;
+        padding: 10px;
+        color: white;
+      }
+
+      .normal-price,
+      .promoted-price {
+        display: inline-block;
+      }
+    }
+  }
+
+  .promoted-baner {
+    background-color: $promoted-baner-bg;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .promoted-baner-title {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 60px 10px;
+    position: relative;
+
+    h2 {
+      font-size: 50px;
+      font-weight: 300;
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    p {
+      font-size: 24px;
+    }
+
+    button {
+      position: absolute;
+      border: none;
+      border-radius: 3px;
+      padding: 22px 28px;
+      cursor: pointer;
+      right: 40%;
+      bottom: -35px;
+    }
+  }
+
+  .promoted-baner-slider {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    right: 15px;
+    background-color: $footer-claim-bg;
+
+    .promoted-baner-slider-left,
+    .promoted-baner-slider-right {
+      padding: 13px 0;
+      text-align: center;
+      transition-duration: 0.5s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+
+    .active {
+      background-color: $primary;
+    }
+  }
+
+  .arrow-left,
+  .arrow-right {
+    display: inline-block;
+    padding: 3px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+  }
+
+  .arrow-left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+  .arrow-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}
