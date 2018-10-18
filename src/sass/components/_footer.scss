@@ -14,11 +14,12 @@ footer {
         margin: 0 0 1.5rem 0;
         padding: 0;
         list-style: none;
+
         li {
           a {
             font-size: 14px;
             line-height: 30px;
-            color: rgb(169,169,169);
+            color: $footer-link-color;
 
             &:hover {
               color: #ffffff;
@@ -49,7 +50,7 @@ footer {
     .copyright {
       p {
         margin: 0;
-        color: rgb(169,169,169);
+        color: $footer-link-color;
         font-size: 14px;
         line-height: 26px;
       }
@@ -66,7 +67,7 @@ footer {
           margin-left: 1rem;
 
           a {
-            color: rgb(169,169,169);
+            color: $footer-link-color;
             text-decoration: none;
 
             &:hover {

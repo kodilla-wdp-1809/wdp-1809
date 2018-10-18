@@ -4,7 +4,7 @@
     width: 13px;
     height: 13px;
     border-radius: 6px;
-    background-color: #e1e1e1;
+    background-color: $product-box-border;
     cursor: pointer;
 
     &.active {
@@ -84,7 +84,7 @@
         p {
           font-size: 14px;
           line-height: 24px;
-          color: rgb(103, 103, 103);
+          color: $text-info-color;
           text-align: justify;
         }
 

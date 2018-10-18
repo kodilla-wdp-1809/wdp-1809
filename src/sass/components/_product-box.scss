@@ -47,7 +47,7 @@
 
       .product-box {
         background-color: #ffffff;
-        border: 1px solid #e1e1e1;
+        border: 1px solid $product-box-border;
         margin: 0 auto 2rem;
 
         &:hover {
@@ -77,7 +77,7 @@
             top: -30px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #292929;
+            background-color: $form-border-color;
             border-radius: 50%;
             color: #ffffff;
             padding: 30px 15px 5px;
@@ -127,7 +127,7 @@
           .stars {
             .star {
               text-decoration: none;
-              color: rgb(42, 42, 42);
+              color: $star-full-color;
               @extend .far;
               @extend .fa-star;
 
@@ -145,7 +145,7 @@
 
         .line {
           margin: 0 10px;
-          border-bottom: 1px solid #2a2a2a;
+          border-bottom: 1px solid $text-color;
           position: relative;
 
           &::before {
