@@ -1,13 +1,13 @@
 .btn-main {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: $text-color;
+  color: $light;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
   
   &:not(.no-hover):hover {
-    color: #ffffff !important;
+    color: $light !important;
     background-color: $primary;
     text-decoration: none;
   }
@@ -32,6 +32,6 @@
 
   &:hover {
     background-color: $text-color;
-    color: #ffffff;
+    color: $light;
   }
 }

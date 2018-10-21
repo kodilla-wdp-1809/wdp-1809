@@ -5,7 +5,7 @@ footer {
 
     .menu-wrapper {
       h6 {
-        color: #ffffff;
+        color: $light;
         text-transform: uppercase;
         margin: 0 0 1rem 0;
       }
@@ -22,7 +22,7 @@ footer {
             color: $footer-link-color;
 
             &:hover {
-              color: #ffffff;
+              color: $light;
             }
           }
         }

@@ -41,7 +41,7 @@
       }
 
       .product-box {
-        background-color: #ffffff;
+        background-color: $light;
         border: 1px solid $product-box-border;
         margin: 0 auto 2rem;
         animation: fadein 2s;
@@ -75,7 +75,7 @@
             transform: translateX(-50%);
             background-color: $form-border-color;
             border-radius: 50%;
-            color: #ffffff;
+            color: $light;
             padding: 30px 15px 5px;
           }
 
@@ -234,6 +234,6 @@
 
   .active {
     width: 100%;
-    border-bottom: 4px solid #d58e32;
+    border-bottom: 4px solid $primary;
   }
 }

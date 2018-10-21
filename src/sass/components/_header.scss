@@ -12,7 +12,7 @@ header {
         line-height: 55px;
 
         a {
-          color: #ffffff;
+          color: $light;
           font-size: 13px;
 
           &:hover {
@@ -69,7 +69,7 @@ header {
       .cart-box {
         display: inline-block;
         position: relative;
-        color: #ffffff;
+        color: $light;
 
         .cart-icon {
           background-color: $primary;
@@ -113,7 +113,7 @@ header {
 
   .menu-bar {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
-    background-color: #ffffff;
+    background-color: $light;
 
     .container > .row {
       height: 84px;
@@ -141,14 +141,14 @@ header {
             text-decoration: none;
             display: flex;
             align-items: center;
-            border-top: 4px solid #ffffff;
+            border-top: 4px solid $light;
             font-weight: 500;
             letter-spacing: 1px;
 
             &:hover,
             &.active {
               background-color: $primary;
-              color: #ffffff;
+              color: $light;
               border-color: $primary;
             }
 
@@ -211,7 +211,7 @@ header {
             position: absolute;
             top: 50px;
             left: -1px;
-            background-color: #ffffff;
+            background-color: $light;
             box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
 
             li {
@@ -219,7 +219,7 @@ header {
               width: 100%;
               margin: 0;
               padding: 10px 0;
-              border-left: 5px solid #ffffff;
+              border-left: 5px solid $light;
 
               &:hover {
                 ul.menu-links-sub {
@@ -243,7 +243,7 @@ header {
                 list-style-type: none;
                 margin: 0;
                 padding: 0;
-                background-color: #ffffff;
+                background-color: $light;
                 box-shadow: 0 1px 3.464px 1px rgba(1, 2, 2, 0.2);
 
                 li {
@@ -251,18 +251,18 @@ header {
                   width: 100%;
                   margin: 0;
                   padding: 10px 0;
-                  border-left: 5px solid #ffffff;
+                  border-left: 5px solid $light;
 
                   &:hover {
                     border-left: 5px solid $footer-claim-bg;
 
                     a {
-                      color: #ffffff;
+                      color: $light;
                     }
                   }
 
                   a {
-                    color: #000000;
+                    color: $dark;
                   }
                 }
               }
@@ -273,7 +273,7 @@ header {
                 border-left: 5px solid $footer-claim-bg;
 
                 a {
-                  color: #ffffff;
+                  color: $light;
                 }
               }
 
@@ -282,7 +282,7 @@ header {
                 padding: 0;
                 text-decoration: none;
                 display: block;
-                color: #000000;
+                color: $dark;
                 text-align: center;
               }
             }
@@ -313,11 +313,11 @@ header {
 
           i:first-child,
           i:last-child {
-            color: #fff;
+            color: $light;
           }
 
           .menu-list-placeholder {
-            color: #fff;
+            color: $light;
           }
         }
       }
@@ -359,7 +359,7 @@ header {
       align-items: center;
       border: none;
       border-radius: 3px;
-      background-color: white;
+      background-color: $light;
       transition-duration: 0.5s;
       padding: 4px 0;
       height: 31px;
@@ -434,7 +434,7 @@ header {
             display: block;
 
             a {
-              color: white;
+              color: $light;
               justify-content: center;
             }
           }

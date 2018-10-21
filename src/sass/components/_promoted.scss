@@ -19,7 +19,7 @@
   }
 
   .promoted-card-title {
-    color: white;
+    color: $light;
     margin: 0;
     font-weight: bold;
   }
@@ -31,7 +31,7 @@
         width: 13px;
         border-radius: 50%;
         display: inline-block;
-        background-color: white;
+        background-color: $light;
         transition-duration: 0.5s;
 
         &:hover {
@@ -54,7 +54,7 @@
     cursor: pointer;
     border: none;
     background-color: $footer-claim-bg;
-    color: white;
+    color: $light;
     padding: 10px;
     transition-duration: 0.5s;
 
@@ -74,7 +74,7 @@
     border-radius: 50%;
     background-color: $footer-claim-bg;
     opacity: 0.9;
-    color: white;
+    color: $light;
     padding-top: 10px;
 
     h2 {
@@ -109,7 +109,7 @@
         @extend .fa-star;
         
         text-decoration: none;
-        color: rgb(42, 42, 42);
+        color: $star-full-color;
 
         &.star-hover {
           color: $primary;
@@ -154,7 +154,7 @@
       .promoted-price {
         background-color: $footer-claim-bg;
         padding: 10px;
-        color: white;
+        color: $light;
       }
 
       .normal-price,
@@ -175,7 +175,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 100%;
-    color: white;
+    color: $light;
     padding: 60px 10px;
     position: relative;
 
@@ -231,7 +231,7 @@
   .arrow-right {
     display: inline-block;
     padding: 3px;
-    border: solid white;
+    border: solid $light;
     border-width: 0 3px 3px 0;
   }
 

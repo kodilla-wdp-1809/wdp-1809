@@ -30,7 +30,7 @@
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: #ffffff;
+      background-color: $light;
       z-index: -1;
     }
   }
@@ -55,7 +55,7 @@
   &:hover {
     i {
       background-color: $primary;
-      color: #ffffff;
+      color: $light;
       border-color: $primary;
     }
 
