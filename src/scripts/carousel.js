@@ -111,14 +111,7 @@
 
   let startX;
   const endTouch = e => {
-    const finishingTouch = e.changedTouches[0].clientX;
-    if (startX < finishingTouch) {
-      pCarousel.style.transform =
-        "translateX(" + (startX-(e.changedTouches[0].clientX-startX)) + "px)";
-    } else if (startX > finishingTouch) {
-      pCarousel.style.transform =
-        "translateX(-" + e.changedTouches[0].clientX + "px)";
-    }
+    pCarousel.style.setProperty("--translate", 0);
     pCarousel.removeEventListener("touchmove", moveTouch);
     pCarousel.removeEventListener("touchend", endTouch);
   };
@@ -129,7 +122,8 @@
       progressX > 0
         ? parseInt(-Math.abs(progressX))
         : parseInt(Math.abs(progressX));
-    pCarousel.style.setProperty("--translate", translation);
+    pCarousel.style.transform =
+        "translateX(" + translation + "px)";
   };
 
   const startTouch = e => {
