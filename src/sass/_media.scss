@@ -1,3 +1,21 @@
+@media (max-width: 1024px) {
+  .section--gallery {
+    .gallery-container {
+      display: block;
+
+      .gallery-furniture {
+        width: 100%;
+      }
+
+      .big-picture-area {
+        width: 100%;
+        margin: 30px 0;
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
 @media (max-width: 767px) {
   header {
     .top-bar-left-side {
@@ -49,6 +67,160 @@
       .phone-number {
         p {
           font-size: 14px;
+        }
+      }
+    }
+  }
+
+
+}
+
+@media (max-width: 572px) {
+  .section--gallery {
+    .gallery-container {
+
+      .big-picture-area {
+        height: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .section--gallery {
+    .gallery-container {
+      .gallery-furniture {
+        .gallery-area {
+          .gallery-image {
+            height: 415px;
+
+            .gallery-tabs {
+              height: 65px;
+
+              .tab-section {
+                height: 65px;
+                line-height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+            }
+
+            .gallery-overlay {
+              height: 350px;
+            }
+          }
+        }
+      }
+
+      .big-picture-area {
+        height: 300px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 426px) {
+  .section--gallery {
+    .gallery-container {
+      .gallery-furniture {
+        height: 550px;
+
+        .gallery-area {
+          height: 478px;
+
+          .gallery-image {
+            height: 365px;
+
+            .gallery-tabs {
+              .tab-section {
+                font-size: 14px;
+              }
+            }
+
+            .gallery-overlay {
+              height: 300px;
+            }
+          }
+        }
+      }
+
+      .big-picture-area {
+        height: 250px;
+
+        .text-area {
+          top: 10px;
+          left: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .section--gallery {
+    .gallery-container {
+      .gallery-furniture {
+        height: 470px;
+
+        .gallery-area {
+          .gallery-image {
+            height: 285px;
+
+            .gallery-tabs {
+              height: 65px;
+
+              .tab-section {
+                font-size: 12px;
+                height: 55px;
+                line-height: 20px;
+              }
+            }
+
+            .gallery-overlay {
+              height: 210px;
+
+              .product-details {
+                .details-box {
+                  height: 50px;
+                  width: 180px;
+
+                  &::before {
+                    border-width: 15px 15px 0 0;
+                  }
+
+                  &::after {
+                    border-width: 0 0 15px 15px;
+                  }
+
+                  h5 {
+                    font-size: 12px;
+                    margin-bottom: 0;
+                    padding-top: 5px;
+                  }
+
+                  .stars {
+                    padding-bottom: 5px;
+                  }
+                }
+
+                .details-circle {
+                  height: 60px;
+                  width: 60px;
+                  transform: translate(0, -125%);
+
+                  .price-new {
+                    font-size: 12px;
+                  }
+
+                  .price-old {
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

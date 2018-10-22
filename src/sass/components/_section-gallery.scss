@@ -5,7 +5,7 @@
     display: flex;
     width: 100%;
 
-    .furniture-gallery {
+    .gallery-furniture {
       height: 600px;
       padding-right: 15px;
       padding-left: 15px;
@@ -19,9 +19,9 @@
         .gallery-image {
           width: 100%;
           height: 440px;
-          background-color: #f4f5f7;
+          background-color: $bg-color-gallery;
           border-style: solid;
-          border-color: #e2e2e2;
+          border-color: $border-color-gallery;
           border-width: 0 2px 0 2px;
           position: relative;
 
@@ -33,9 +33,9 @@
             .tab-section {
               width: 25%;
               height: 45px;
-              background-color: #fff;
+              background-color: $bg-color-gallery;
               border-style: solid;
-              border-color: #e2e2e2;
+              border-color: $border-color-gallery;
               border-width: 2px 0 2px 2px;
               text-transform: uppercase;
               font-size: 18px;
@@ -43,6 +43,7 @@
               line-height: 45px;
               position: relative;
               margin: 0;
+              animation: fadein 2s;
 
               &:hover {
                 cursor: pointer;
@@ -54,14 +55,14 @@
             }
 
             .active {
-              color: #d58e32;
-              background-color: #f4f5f7;
+              color: $gallery-color;
+              background-color: $bg-color-gallery;
               border-bottom: transparent;
 
               &::before {
                 content: '';
                 position: absolute;
-                border-bottom: 4px solid #d58e32;
+                border-bottom: 4px solid $gallery-color;
                 width: 103%;
                 top: -2px;
                 left: -2px;
@@ -78,19 +79,23 @@
             height: 395px;
             padding-left: 10px;
             background-image: url("https://images.pexels.com/photos/923192/pexels-photo-923192.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: fadein 2s;
 
             .gallery-icons {
               display: flex;
               flex-direction: column;
-
+              width: 50px;
+              
               .icon-container {
                 display: flex;
                 align-items: center;
 
                 .icon-description {
-                  color: white;
-                  background-color: #2a2a2a;
+                  color: $gallery-color2;
+                  background-color: $bg-color-gallery2;
                   margin: 0 0 0 15px;
                   font-size: 12px;
                   padding: 3px 5px;
@@ -104,7 +109,7 @@
                     height: 0;
                     border-style: solid;
                     border-width: 6px 10.4px 6px 0;
-                    border-color: transparent #2a2a2a transparent transparent;
+                    border-color: transparent $bg-color-gallery2 transparent transparent;
                     margin-right: 5px;
                     position: absolute;
                     left: -10px;
@@ -116,15 +121,14 @@
                   margin: 5px 0;
 
                   &:hover {
-                    color: #d58e32;
+                    color: $gallery-color;
                     background-color: transparent;
-                    border-color: #d58e32;
+                    border-color: $gallery-color;
                   }
 
                   &:hover+.icon-description {
                     visibility: visible;
                   }
-
                 }
               }
             }
@@ -139,7 +143,7 @@
               .details-box {
                 height: 100px;
                 width: 250px;
-                background-color: white;
+                background-color: $gallery-color2;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -157,7 +161,7 @@
                   left: 0;
                   border-style: solid;
                   border-width: 30px 30px 0 0;
-                  border-color: #000000 transparent transparent transparent;
+                  border-color: $border-color-gallery2 transparent transparent transparent;
                 }
 
                 &::after {
@@ -168,7 +172,7 @@
                   height: 0;
                   border-style: solid;
                   border-width: 0 0 30px 30px;
-                  border-color: transparent transparent #000000 transparent;
+                  border-color: transparent transparent $border-color-gallery2 transparent;
                   right: 0;
                   bottom: 30px;
                 }
@@ -180,11 +184,16 @@
                 }
 
                 .stars {
-                  a {
+                  span {
                     text-decoration: none;
                     color: rgb(42, 42, 42);
                     @extend .far;
                     @extend .fa-star;
+
+                    &.star-hover {
+                      color: $primary;
+                      font-weight: 900;
+                    }
 
                     &.full {
                       @extend .fas;
@@ -208,7 +217,7 @@
                 .price-new {
                   font-size: 18px;
                   margin: 0;
-                  color: white;
+                  color: $gallery-color2;
                   font-weight: bold;
                   letter-spacing: 1px;
                 }
@@ -216,7 +225,7 @@
                 .price-old {
                   display: inline-flex;
                   text-decoration: line-through;
-                  color: white;
+                  color: $gallery-color2;
                   margin: 0;
                   font-size: 13px;
                   letter-spacing: 1px;
@@ -232,40 +241,53 @@
           display: flex;
           justify-content: space-around;
           align-items: center;
-          border: 2px solid #e2e2e2;
-          padding: 0 5px 0 5px;
+          border: 2px solid $border-color-gallery;
+          padding: 0 5px;
         }
 
         .slider-box {
           height: 70px;
           width: 30px;
-          background-color: #2a2a2a;
-          color: white;
+          background-color: $bg-color-gallery2;
+          color: $gallery-color2;
           display: flex;
           justify-content: center;
           align-items: center;
+          animation: fadein 2s;
         }
 
         .slider-box-arr {
           &:hover {
             cursor: pointer;
-            color: #d58e32;
+            color: $gallery-color;
           }
         }
 
-        .slider-image {
-          width: 70px;
-          background-color: #cccccc;
-          opacity: 0.5;
+        .pictures-area {
+          width: 100%;
+          height: 88px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
 
-          &:hover {
-            cursor: pointer;
-          }
-
-          img {
+          .slider-image {
             width: 70px;
-            height: auto;
-            overflow: hidden;
+            background-color: $promoted-banner-bg;
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            .js-image {
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+              overflow: hidden;
+            }
+
+            .js-image-ovl {
+              opacity: 0.5;
+            }
           }
         }
 
@@ -277,7 +299,7 @@
 
     .big-picture-area {
       height: 600px;
-      background-color: #e8edf7;
+      background-color: $bg-color-gallery3;
       width: 50%;
       position: relative;
 
@@ -300,7 +322,6 @@
         .text-price {
           display: flex;
           align-items: flex-end;
-          text-transform: uppercase;
           font-size: 18px;
           letter-spacing: 1px;
           margin: 0;
@@ -310,7 +331,7 @@
           }
 
           .text-price-right {
-            color: #79ae30;
+            color: $bg-color-gallery4;
             font-size: 40px;
             letter-spacing: 1px;
             margin: 0;
@@ -319,7 +340,7 @@
         }
 
         .product-name {
-          color: #d58e32;
+          color: $gallery-color;
           font-size: 40px;
           letter-spacing: 1px;
           margin: 0 0 20px;
@@ -327,9 +348,8 @@
         }
 
         .shop-button {
-          background-color: #79ae30;
-          color: white;
-          text-transform: uppercase;
+          background-color: $bg-color-gallery4;
+          color: $gallery-color2;
           font-size: 14px;
           z-index: 2;
           height: 50px;
@@ -341,10 +361,20 @@
           border-radius: 5px;
 
           &:hover {
-            background-color: #d58e32 !important;
+            background-color: $gallery-color !important; //important uzyty by nadpisac kolory uzyte bez bootstrapa
           }
         }
       }
+    }
+  }
+
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
     }
   }
 }
