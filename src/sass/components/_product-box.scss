@@ -5,10 +5,14 @@
   max-width: 300%;
   overflow: hidden;
 
+  .carousel-hide {
+    display: none;
+  }
+
   .products-carousel {
     width: 100%;
-    display: inline-flex;
     height: 100%;
+    display: inline-flex;
 
     &.mouse-drag {
       cursor: -webkit-grabbing;
@@ -215,5 +219,14 @@
         }
       }
     }
+  }
+}
+
+.js-products {
+  cursor: pointer;
+
+  &.active {
+    width: 100%;
+    border-bottom: 4px solid #D58E32;
   }
 }
