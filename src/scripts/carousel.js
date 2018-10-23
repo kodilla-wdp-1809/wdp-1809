@@ -3,17 +3,20 @@
 
   // Variables
 
-  var pBox = document.querySelectorAll(".carousel-box");
-  var pCarousel = document.querySelector(".products-carousel");
+  var pBox = document.querySelectorAll(".carousel-show .carousel-box");
+  var pCarousel = document.querySelector(".products-carousel.carousel-show");
   var carouselDots = document.querySelector(".carousel-dots");
   var dotsMain = document.querySelector(".dots-main");
   var boxArray = [];
+  var productsCard = document.querySelectorAll(".js-products");
+  var jsDots = document.getElementById("js-dots");
+  var carouselCard = document.querySelectorAll(".js-productsList");
 
   // Dynamically added dots that depend on the number of product boxes
 
   function addDots() {
     var box;
-    var vPortWidth = window.screen.availWidth;
+    var vPortWidth = window.innerWidth || document.documentElement.clientWidth;
     var pBoxL = pBox.length;
     var i;
     var dotsTempl = '<li><span class="dot-click basic-animation"></span></li>';
@@ -45,34 +48,26 @@
   var dotClic = document.querySelectorAll(".dot-click");
   var dotClick = dotClic.length;
   var onActive = document.querySelectorAll(".panel-bar .dots li span");
-  var pBoxWidth = document.querySelectorAll(".carousel-box");
-  var move = pBoxWidth[0].clientWidth;
   var viewWidth = window.screen.availWidth;
   onActive[0].classList.add("active");
 
-  // This function adjusts the carousel movement
-
-  function setCount(a, c, d) {
-    var slide = (pCarousel.style.transform =
-      "translateX(-" + a * (d / c) + "px)");
-    return slide;
-  }
-
-  // On dots click event function
-
   function onDotClick(e) {
-    var pBoxL = pBox.length;
+    var selv = e.target;
 
     for (var i = 0; i < onActive.length; i++) {
       if (onActive[i].classList.contains("active")) {
         onActive[i].classList.remove("active");
       }
-      if (onActive[i] === e.target) {
-        setCount(move * i, boxArray, pBoxL);
-        pCarousel.style.transition = "transform 0.5s ease";
+      if (onActive[i] === selv) {
+        var pBoxWidth = document.querySelectorAll(".carousel-show .carousel-box");
+        var move = pBoxWidth[i].clientWidth;
+        var pboxActive = document.querySelector(".products-carousel.carousel-show");
+        var pBoxLe = pBoxWidth.length;
+        pboxActive.style.transform = "translateX(-" + move * i * (pBoxLe / boxArray) + "px)";
+        pboxActive.style.transition = "transform 0.5s ease";
       }
     }
-    e.target.classList.add("active");
+    selv.classList.add("active");
   }
 
   // Dots events listener
@@ -81,34 +76,41 @@
     dotClic[i].addEventListener("click", onDotClick);
   }
 
-  // Mouse slide carousel products
+  //  Mouse slide carousel products
 
-  var isDown = false;
+  function mouseSlide(carouselCont) {
+    var isDown = false;
 
-  pCarousel.addEventListener("mousedown", e => {
-    isDown = true;
-    pCarousel.classList.add("mouse-drag");
-  });
+    carouselCont.addEventListener("mousedown", e => {
+      isDown = true;
+      carouselCont.classList.add("mouse-drag");
+    });
 
-  pCarousel.addEventListener("mouseleave", () => {
-    isDown = false;
-    pCarousel.classList.remove("mouse-drag");
-  });
+    carouselCont.addEventListener("mouseleave", () => {
+      isDown = false;
+      carouselCont.classList.remove("mouse-drag");
+    });
 
-  pCarousel.addEventListener("mouseup", () => {
-    isDown = false;
-    pCarousel.classList.remove("mouse-drag");
-  });
+    carouselCont.addEventListener("mouseup", () => {
+      isDown = false;
+      carouselCont.classList.remove("mouse-drag");
+    });
 
-  pCarousel.addEventListener("mousemove", e => {
-    if (!isDown) return;
-    e.preventDefault();
-    const y = e.clientX - (pCarousel.offsetLeft + pCarousel.offsetWidth);
-    pCarousel.style.transform = "translateX(" + y + "px)";
-  });
+    carouselCont.addEventListener("mousemove", e => {
+      if (!isDown) return;
+      e.preventDefault();
+      const y = e.clientX - (carouselCont.offsetLeft + carouselCont.offsetWidth);
+      carouselCont.style.transform = "translateX(" + y + "px)";
+    });
+  }
+
+  mouseSlide(carouselCard[0]);
+  mouseSlide(carouselCard[1]);
+  mouseSlide(carouselCard[2]);
+  mouseSlide(carouselCard[3]);
+  mouseSlide(carouselCard[4]);
 
   // Touch slide carousel products
-
   let startX;
   const endTouch = e => {
     pCarousel.style.setProperty("--translate", 0);
@@ -122,8 +124,7 @@
       progressX > 0
         ? parseInt(-Math.abs(progressX))
         : parseInt(Math.abs(progressX));
-    pCarousel.style.transform =
-        "translateX(" + translation + "px)";
+    pCarousel.style.transform = "translateX(" + translation + "px)";
   };
 
   const startTouch = e => {
@@ -138,4 +139,37 @@
 
   pCarousel.addEventListener("touchstart", startTouch);
 
+  var productsList = document.querySelectorAll(".js-productsList");
+
+  function cardChecker() {
+    for (var k = 0; k < productsCard.length; k++) {
+      var isDown = false;
+      if (productsCard[k].classList.contains("active")) {
+        productsList[k].classList.remove("carousel-hide");
+        productsList[k].className += " products-carousel carousel-show";
+      } else {
+        productsList[k].className += " carousel-hide";
+        productsList[k].classList.remove("products-carousel");
+        productsList[k].classList.remove("carousel-show");
+      }
+    }
+  }
+
+  cardChecker();
+
+  for (var l = 0; l < productsCard.length; l++) {
+    productsCard[l].addEventListener("click", function() {
+      for (var j = 0; j < productsCard.length; j++) {
+        productsCard[j].classList.remove("active");
+      }
+      this.className += " active";
+      for (var c = 0; c < onActive.length; c++) {
+        if (onActive[c].classList.contains("active")) {
+          onActive[c].classList.remove("active");
+          onActive[0].classList.add("active");
+        }
+      }
+      cardChecker();
+    });
+  }
 })();

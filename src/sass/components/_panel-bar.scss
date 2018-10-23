@@ -2,7 +2,7 @@
   margin-bottom: 30px;
 
   .row > * {
-    border-bottom: 4px solid #e2e2e2;
+    border-bottom: 4px solid $border-bottom-color;
   }
 
   .heading {
@@ -40,7 +40,7 @@
         margin: 0 0.5rem;
         font-weight: 600;
 
-        a {
+        a, span {
           color: rgb(42, 42, 42);
           position: relative;
           text-decoration: none;
@@ -80,7 +80,7 @@
           width: 13px;
           height: 13px;
           border-radius: 6px;
-          background-color: #e1e1e1;
+          background-color: $dots-background;
           cursor: pointer;
 
           &.active,

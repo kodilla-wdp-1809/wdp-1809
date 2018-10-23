@@ -1,14 +1,18 @@
 .carousel-wrapper {
-  min-height: 450px;
+  min-height: 400px;
   margin: 0 auto;
   width: 100%;
   max-width: 300%;
   overflow: hidden;
 
+  .carousel-hide {
+    display: none;
+  }
+
   .products-carousel {
     width: 100%;
-    display: inline-flex;
     height: 100%;
+    display: inline-flex;
 
     &.mouse-drag {
       cursor: -webkit-grabbing;
@@ -45,6 +49,16 @@
         border: 1px solid #e1e1e1;
         margin: 0 auto 2rem;
         animation: fadein 2s;
+
+        @keyframes fadein {
+          from {
+            opacity: 0;
+          }
+
+          to {
+            opacity: 1;
+          }
+        }
 
         &:hover {
           .btn-main-small {
@@ -124,7 +138,9 @@
             .star {
               text-decoration: none;
               color: rgb(42, 42, 42);
+
               @extend .far;
+
               @extend .fa-star;
 
               &.star-hover {
@@ -214,26 +230,14 @@
         }
       }
     }
-
-    @keyframes fadein {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
   }
 }
 
-.new-furniture-panel {
-  .furniture-tab {
-    cursor: pointer;
-  }
+.js-products {
+  cursor: pointer;
 
-  .active {
+  &.active {
     width: 100%;
-    border-bottom: 4px solid #d58e32;
+    border-bottom: 4px solid $primary;
   }
 }
