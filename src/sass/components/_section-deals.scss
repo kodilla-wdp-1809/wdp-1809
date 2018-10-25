@@ -13,7 +13,7 @@
       flex-direction: column;
       padding-left: 30px;
       padding-bottom: 30px;
-      color: #ffffff;
+      color: $light;
       text-transform: uppercase;
       letter-spacing: 1px;
 
@@ -29,7 +29,7 @@
       }
 
       .para-fonts-promotion {
-        border: 5px solid #ffffff;
+        border: 5px solid $light;
         width: 120px;
         padding: 5px 0;
         display: flex;
@@ -38,7 +38,7 @@
     }
 
     .image-holder-small {
-      background-color: rgb(206, 206, 206);
+      background-color: $deals-image-bg;
       height: 195px;
     }
 
@@ -47,7 +47,7 @@
     }
 
     .image-holder-small-bottom {
-      background-color: rgb(255, 209, 209);
+      background-color: $deals-button;
     }
 
     .flex-container {
@@ -57,7 +57,7 @@
       justify-content: flex-start;
       align-content: stretch;
       align-items: flex-start;
-      color: #000000;
+      color: $dark;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -95,7 +95,7 @@
       }
 
       .para-fonts-cash {
-        color: #d58e32;
+        color: $primary;
         font-weight: bold;
       }
     }
@@ -126,7 +126,7 @@
 
       .para-fonts-prom {
         font-size: 25px;
-        color: #d58e32;
+        color: $primary;
       }
     }
 

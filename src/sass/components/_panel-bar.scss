@@ -2,7 +2,7 @@
   margin-bottom: 30px;
 
   .row > * {
-    border-bottom: 4px solid $border-bottom-color;
+    border-bottom: 4px solid $bar-border;
   }
 
   .heading {
@@ -41,7 +41,7 @@
         font-weight: 600;
 
         a, span {
-          color: rgb(42, 42, 42);
+          color: $star-full-color;
           position: relative;
           text-decoration: none;
           font-size: 18px;
@@ -68,7 +68,7 @@
       margin: 0;
       padding: 0 0 0 1rem;
       list-style: none;
-      background-color: #ffffff;
+      background-color: $light;
       transform: translateY(15px);
 
       li {
@@ -80,7 +80,7 @@
           width: 13px;
           height: 13px;
           border-radius: 6px;
-          background-color: $dots-background;
+          background-color: $product-box-border;
           cursor: pointer;
 
           &.active,

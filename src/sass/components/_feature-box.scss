@@ -1,7 +1,7 @@
 .feature-box {
   display: block;
   text-decoration: none;
-  border: 1px solid #b6b6b6;
+  border: 1px solid $feature-box-border;
   text-align: center;
   margin-top: 40px;
 
@@ -17,12 +17,12 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      border: 1px solid #b6b6b6;
+      border: 1px solid $feature-box-border;
     }
 
     &::before {
       content: '';
-      border: 1px solid #b6b6b6;
+      border: 1px solid $feature-box-border;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -30,14 +30,14 @@
       width: 76px;
       height: 76px;
       border-radius: 100%;
-      background-color: #ffffff;
+      background-color: $light;
       z-index: -1;
     }
   }
 
   .content {
     text-transform: uppercase;
-    color: rgb(42,42,42);
+    color: $star-full-color;
     margin-top: -0.5rem;
     letter-spacing: 1px;
 
@@ -55,7 +55,7 @@
   &:hover {
     i {
       background-color: $primary;
-      color: #ffffff;
+      color: $light;
       border-color: $primary;
     }
 
