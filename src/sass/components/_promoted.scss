@@ -245,3 +245,37 @@
     transform: rotate(-45deg);
   }
 }
+
+@media (max-width: 992px) {
+  .section--promoted {    
+    .promoted-card-container {
+      margin: 0 auto;
+    }
+
+    .promoted-banner-title {
+      button {
+        right: 30%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section--promoted {
+    .promoted-card-container {
+      margin-bottom: 20px;
+    }
+
+    .promoted-banner {
+      min-height: 500px;
+      max-width: 95%;
+      margin: 0 auto;
+    }
+
+    .promoted-banner-title {
+      button {
+        right: 37%;
+      }
+    }
+  }
+}
