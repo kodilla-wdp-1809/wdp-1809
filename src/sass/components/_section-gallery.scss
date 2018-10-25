@@ -19,9 +19,9 @@
         .gallery-image {
           width: 100%;
           height: 440px;
-          background-color: #f4f5f7;
+          background-color: $image-bg;
           border-style: solid;
-          border-color: #e2e2e2;
+          border-color: $bar-border;
           border-width: 0 2px 0 2px;
           position: relative;
 
@@ -33,9 +33,9 @@
             .tab-section {
               width: 25%;
               height: 45px;
-              background-color: #fff;
+              background-color: $light;
               border-style: solid;
-              border-color: #e2e2e2;
+              border-color: $bar-border;
               border-width: 2px 0 2px 2px;
               text-transform: uppercase;
               font-size: 18px;
@@ -54,14 +54,14 @@
             }
 
             .active {
-              color: #d58e32;
-              background-color: #f4f5f7;
+              color: $primary;
+              background-color: $image-bg;
               border-bottom: transparent;
 
               &::before {
                 content: '';
                 position: absolute;
-                border-bottom: 4px solid #d58e32;
+                border-bottom: 4px solid $primary;
                 width: 103%;
                 top: -2px;
                 left: -2px;
@@ -89,8 +89,8 @@
                 align-items: center;
 
                 .icon-description {
-                  color: white;
-                  background-color: #2a2a2a;
+                  color: $light;
+                  background-color: $text-color;
                   margin: 0 0 0 15px;
                   font-size: 12px;
                   padding: 3px 5px;
@@ -104,7 +104,7 @@
                     height: 0;
                     border-style: solid;
                     border-width: 6px 10.4px 6px 0;
-                    border-color: transparent #2a2a2a transparent transparent;
+                    border-color: transparent $text-color transparent transparent;
                     margin-right: 5px;
                     position: absolute;
                     left: -10px;
@@ -116,9 +116,9 @@
                   margin: 5px 0;
 
                   &:hover {
-                    color: #d58e32;
+                    color: $primary;
                     background-color: transparent;
-                    border-color: #d58e32;
+                    border-color: $primary;
                   }
 
                   &:hover+.icon-description {
@@ -139,7 +139,7 @@
               .details-box {
                 height: 100px;
                 width: 250px;
-                background-color: white;
+                background-color: $light;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -157,7 +157,7 @@
                   left: 0;
                   border-style: solid;
                   border-width: 30px 30px 0 0;
-                  border-color: #000000 transparent transparent transparent;
+                  border-color: $dark transparent transparent transparent;
                 }
 
                 &::after {
@@ -216,7 +216,7 @@
                 .price-old {
                   display: inline-flex;
                   text-decoration: line-through;
-                  color: white;
+                  color: $light;
                   margin: 0;
                   font-size: 13px;
                   letter-spacing: 1px;
@@ -232,15 +232,15 @@
           display: flex;
           justify-content: space-around;
           align-items: center;
-          border: 2px solid #e2e2e2;
+          border: 2px solid $bar-border;
           padding: 0 5px 0 5px;
         }
 
         .slider-box {
           height: 70px;
           width: 30px;
-          background-color: #2a2a2a;
-          color: white;
+          background-color: $text-color;
+          color: $light;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -249,13 +249,13 @@
         .slider-box-arr {
           &:hover {
             cursor: pointer;
-            color: #d58e32;
+            color: $primary;
           }
         }
 
         .slider-image {
           width: 70px;
-          background-color: #cccccc;
+          background-color: $promoted-banner-bg;
           opacity: 0.5;
 
           &:hover {
@@ -277,7 +277,7 @@
 
     .big-picture-area {
       height: 600px;
-      background-color: #e8edf7;
+      background-color: $picture-bg;
       width: 50%;
       position: relative;
 
@@ -310,7 +310,7 @@
           }
 
           .text-price-right {
-            color: #79ae30;
+            color: $gallery-price;
             font-size: 40px;
             letter-spacing: 1px;
             margin: 0;
@@ -319,7 +319,7 @@
         }
 
         .product-name {
-          color: #d58e32;
+          color: $primary;
           font-size: 40px;
           letter-spacing: 1px;
           margin: 0 0 20px;
@@ -327,8 +327,8 @@
         }
 
         .shop-button {
-          background-color: #79ae30;
-          color: white;
+          background-color: $gallery-price;
+          color: $light;
           text-transform: uppercase;
           font-size: 14px;
           z-index: 2;
@@ -341,7 +341,7 @@
           border-radius: 5px;
 
           &:hover {
-            background-color: #d58e32 !important;
+            background-color: $primary;
           }
         }
       }
